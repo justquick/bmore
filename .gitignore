@@ -1,5 +1,4 @@
 *.pyc
-dev.db
 local_settings.py
 media/ugc
 media/
