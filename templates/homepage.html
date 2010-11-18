@@ -1,5 +1,5 @@
 {% extends "site_base.html" %}
-{% load position_tags %}
+{% load position_tags webdesign %}
 {% block head_title %}Home{% endblock %}
 {% block extra_head %}
 <style type="text/css" media="screen">
@@ -399,7 +399,7 @@ div.five-column .column + .column {
 	margin-left: 15px;
 }
 div.five-column .one {
-	width: 184px;
+	width: 125px;
 }
 div.five-column .two {
 	width: 383px;
@@ -647,11 +647,13 @@ div#popularStories p.section {
 	color: #000;
 }
 
-.politics { background-color: #FFFAAF;}
-.opinion { background-color: #6BDDD0;}
-.local { background-color:#87DD9D;}
-.sports { background-color:#B4C1E9;}
-.culture { background-color:#D1AEDD;}
+.mon { background-color: #FFFAAF;}
+.tue { background-color: #6BDDD0;}
+.wed { background-color:#87DD9D;}
+.thu { background-color:#B4C1E9;}
+.fri { background-color:#D1AEDD;}
+.sat { background-color:#FF9900;}
+.sun { background-color:#CC6666;}
 
 
 .member_opts li {
@@ -684,19 +686,19 @@ ul.member_opts {
 				<a href="#"><img src="{{ STATIC_URL }}/images/demoleadphoto.jpg" alt="" /></a> 
 				<p class="caption"><strong>CRITICAL COMMENTS:</strong> Secretary of State Hillary Rodham Clinton chats with Argentine President Christina Fernandez de Kirchner during their meeting at Casa Rosada in Buenos Aires on Monday. Last week, Mrs. Fernandez said "there were huge hopes for change in Latin America" when President Obama took office, but the reality has been a "hard blow on those expectations." (Associated Press)</p>
 			</div>
-			<h1>Clinton faces critical hosts in Latin America</h1>
+			<h1>{% lorem 5 w random %}</h1>
 			<div class="two-col">
-				<p>Secretary of State Hillary Rodham Clinton added a last-minute stop in Argentina on Monday as part of her Latin American tour this week, amid complaints that she was ignoring countries critical of U.S. policies in the region.</p>
-				<p>The State Department attributed the change to the difficulty of spending the night in Chile, as originally planned, because of the extensive damage caused by Saturday's 8.8 magnitude earthquake there. Mrs. Clinton, who is bringing satellite telephone equipment to Chile, will make a brief stop in the capital, Santiago, Tuesday morning.</p>
-				<p>However, diplomats and analysts said, the choice of Argentina was no accident — but not only because of its proximity to Uruguay, where Mrs. Clinton was earlier in the day. Her initial decision to skip Argentina, which was fiercely defended by the Obama administration's top official for Latin America on Friday, was criticized by Argentine and other officials.</p>
-				<p>"This is about damage control," said Mark Weisbrot, co-director of the Center for Economic and Policy Research, a Washington think tank. "And not only in Argentina but in the entire region. People are disappointed that Obama hasn't paid as much attention to them as he promised and has continued [George W.] Bush's policies."</p>
+                            {% lorem 3 p %}
 				<p class="blue right">
 					<a href="#">Continue &rarr;</a>
 				</p>
 			</div>
 		</div>
 		<div class="two column">
-			<div class="aside">
+                        <div class="aside">
+                            <h4>Featured Artist</h4>
+				<div class="lrec ad">LREC</div>
+			{% comment %}
 				<h4>Top Stories</h4>
 				<p>Breaking news as it happens around the Web.</p>
 				<dl class="briefs top-stories">
@@ -717,38 +719,48 @@ ul.member_opts {
 					<a href="#">More top stories →</a>
 				</p>
 			</div>
-			<div class="ad-wrap">
-				<cite>Advertisement</cite>
-				<div class="lrec ad">LREC</div>
-			</div>
+			{% endcomment %}
 		</div>
 	</div>
 	<hr />
 	<div class="five-column column-row" id="popularStories">
+                <p class="blue right">
+                        <a href="#">View the Full Schedule &rarr;</a>
+                </p>            
 		<div class="one column">
-			<p class="section politics">Politics</p>
+			<p class="section mon">Monday 11/15</p>
 			<h5><a href="http://www.lipsum.com/">Aliquam Erat Volutpat</a></h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt erat nec venenatis pellentesque. <cite>5 minutes ago</cite></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt erat nec venenatis pellentesque. <cite>6 PM</cite></p>
 		</div>
 		<div class="one column padded">
-			<p class="section sports">Sports</p>
+			<p class="section tue">Tuesday 11/16</p>
 			<h5><a href="">Nulla Cursus Lorem Vel Urna Luctus Tincidunt</a></h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt erat nec venenatis pellentesque enim facilisis vehicula <cite>10 minutes ago</cite></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt erat nec venenatis pellentesque enim facilisis vehicula <cite>12 AM</cite></p>
 		</div>
 		<div class="one column padded">
-			<p class="section culture">Culture</p>
+			<p class="section wed">Wednesday 11/17</p>
 			<h5><a href="http://www.lipsum.com">Lorem Ipsum Dolor Sit Amet</a></h5>
-			<p>Sed tincidunt erat nec venenatis pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <cite>10 minutes ago</cite></p>
+			<p>Sed tincidunt erat nec venenatis pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <cite>4:45 PM</cite></p>
 		</div>
 		<div class="one column padded">
-			<p class="section local">Local</p>
+			<p class="section thu">Thursday 11/18</p>
 			<h5><a href="http://www.zurb.com">Nulla Cursus Lorem Vel Urna Luctus</a></h5>
-			<p>Sed tincidunt erat nec venenatis pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <cite>10 minutes ago</cite></p>
+			<p>Sed tincidunt erat nec venenatis pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <cite>3 PM</cite></p>
 		</div>
 		<div class="one column padded">
-			<p class="section opinion">Opinion</p>
+			<p class="section fri">Friday 11/20</p>
 			<h5><a href="http://www.lipsum.com">Nam Vehicula Porta Magna</a></h5>
-			<p>Nunc tempor orci a justo ornare interdum. Maecenas sed elit quis elit tincidunt consectetur ut nec. Praesent non purus tellus. <cite>1 hour ago</cite></p>
+			<p>Nunc tempor orci a justo ornare interdum. Maecenas sed elit quis elit tincidunt consectetur ut nec. Praesent non purus tellus. <cite>5 PM</cite></p>
+		</div>
+		<div class="one column padded">
+			<p class="section sat">Saturday 11/21</p>
+			<h5><a href="http://www.lipsum.com">Nam Vehicula Porta Magna</a></h5>
+			<p>Nunc tempor orci a justo ornare interdum. Maecenas sed elit quis elit tincidunt consectetur ut nec. Praesent non purus tellus. <cite>10 PM</cite></p>
+		</div>
+		<div class="one column padded">
+			<p class="section sun">Sunday 11/22</p>
+			<h5><a href="http://www.lipsum.com">Nam Vehicula Porta Magna</a></h5>
+			<p>Nunc tempor orci a justo ornare interdum. Maecenas sed elit quis elit tincidunt consectetur ut nec. Praesent non purus tellus. <cite>11 PM</cite></p>
 		</div>
 	</div>
 	<hr />

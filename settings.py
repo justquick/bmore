@@ -92,7 +92,10 @@ INSTALLED_APPS = APPS_CORE + \
     APPS_MEDIA + \
     APPS_UTILS + \
     APPS_REGISTRATION + \
-    APPS_TINYMCE 
+    APPS_TINYMCE + (
+        'django.contrib.webdesign',
+    )
+
 
 ADMIN_TOOLS_THEMING_CSS = 'admin/css/theming.css'
 # ADMIN_TOOLS_MENU = 'menu.CustomMenu'
