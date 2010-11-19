@@ -3,5 +3,5 @@
 
 django
 calloway
-
+git+git://github.com/thauber/django-schedule.git#egg=schedule
 -r calloway_reqs.txt

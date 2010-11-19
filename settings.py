@@ -94,6 +94,7 @@ INSTALLED_APPS = APPS_CORE + \
     APPS_REGISTRATION + \
     APPS_TINYMCE + (
         'django.contrib.webdesign',
+        'schedule',
     )
 
 
@@ -102,6 +103,8 @@ ADMIN_TOOLS_THEMING_CSS = 'admin/css/theming.css'
 
 TINYMCE_JS_URL = '%sjs/tiny_mce/tiny_mce.js' % STATIC_URL
 TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, 'js/tiny_mce')
+
+FORCE_SCRIPT_NAME = ''
 
 try:
     from local_settings import *
